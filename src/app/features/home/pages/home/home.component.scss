@@ -1,0 +1,36 @@
+@import "../../../../../styles.scss";
+
+h1 {
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+p {
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.title-button {
+    color: #fff;
+    background-color: #ff0000;
+
+    &:hover {
+        background-color: #DA0000;
+    }
+}
+
+.title-img {
+    img {
+        border-radius: 5rem 5rem 1rem 5rem;
+    }
+}
+
+
+/*search*/
+
+.search {
+    width: 100%;
+    background-color: #f8f8f8;
+    border-radius: 1rem;
+}
