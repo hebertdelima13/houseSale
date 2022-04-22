@@ -1,36 +1,147 @@
 @import "../../../../../styles.scss";
 
-h1 {
-    font-family: $headingFont;
-    font-weight: 700;
-    font-size: 3rem;
-}
 
-p {
-    font-weight: 600;
-    font-size: .8rem;
-}
+/*Top header*/
+.top-header {
+    h1 {
+        font-family: $headingFont;
+        font-weight: 700;
+        font-size: 3rem;
+    }
 
-.title-button {
-    color: #fff;
-    background-color: #ff0000;
+    p {
+        font-weight: 600;
+        font-size: .8rem;
+    }
 
-    &:hover {
-        background-color: #DA0000;
+    .title-button {
+        color: #fff;
+        background-color: #ff0000;
+
+        &:hover {
+            background-color: #DA0000;
+        }
+    }
+
+    .title-img {
+        img {
+            border-radius: 5rem 5rem 1rem 5rem;
+        }
     }
 }
 
-.title-img {
-    img {
-        border-radius: 5rem 5rem 1rem 5rem;
-    }
-}
-
-
-/*search*/
+/*Search*/
 
 .search {
     width: 100%;
     background-color: #f8f8f8;
+}
+
+.search-container {
+    width: 100%;
+    background-color: #f8f8f8;
     border-radius: 1rem;
+}
+
+/*Featured properties*/
+
+.featured-properties {
+    h2 {
+        font-family: $headingFont;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: .8rem;
+    }
+
+    i {
+        color: #DA0000;
+    }
+}
+
+/*Who we are*/
+
+.who-we-are {
+    background: #DA0000;
+
+    h6 {
+        font-size: .7rem;
+        font-weight: 400;
+        color: #E8A392;
+    }
+
+    h5 {
+        font-family: $headingFont;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    p {
+        font-size: .8rem;
+        font-weight: 400;
+        color: #E8A392;
+        text-align: justify;
+    }
+
+    .btn {
+        font-size: .8rem;
+        font-weight: 600;
+        color: #fff;
+        background: #ff0000;
+        box-shadow: 3px 3px 0px 0px #B80000;
+        cursor: default;
+        transition: all .6s;
+
+        &:hover {
+            box-shadow: 3px 3px 0px 0px #000;
+            transition: all .6s;
+        }
+    }
+
+    .who-we-ares-right {
+        img {
+            border-radius: 0rem 3rem 0rem 3rem;
+            box-shadow: 2px 2px 2px 2px #B80000;
+        }        
+    }
+}
+
+/*Doubts*/
+
+.doubts {
+    h2 {
+        font-family: $headingFont;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: .8rem;
+    }
+
+    i {
+        color: #DA0000;
+    }
+    
+    .accordion-button {
+        background: #DA0000;
+        color: #fff;
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .accordion-body {
+        font-size: 0.8rem;
+    }
 }

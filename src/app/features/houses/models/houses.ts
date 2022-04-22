@@ -4,5 +4,6 @@ export interface Houses {
     address: string;
     desc: string;
     price: number;
+    img: string;
     inclusionDate: Date | string;
 }

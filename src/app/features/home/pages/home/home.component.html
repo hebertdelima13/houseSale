@@ -1,74 +1,200 @@
 <app-header></app-header>
 
-<div class="container mt-5">
-    <div class="row d-flex align-items-center">
-        <div class="col text-center text-lg-start">
-            <h1>A realização do seu sonho está aqui!</h1>
-            <p>Encontre os melhores lugares ao seu redor com os preços mais baratos e acessíveis. Fácil. Simples.
-                Rápido.
-            </p>
-            <div class="btn title-button">Saber mais</div>
-        </div>
-
-        <div class="col-12 col-md-12 col-lg-6 mt-5 mt-lg-0 text-center text-lg-end">
-            <div class="title-img">
-                <img class="img-fluid"
-                    src="https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt="">
+<!--Top-->
+<section class="top-header my-5 py-5">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col text-center text-lg-start">
+                <h1>A realização do seu sonho está aqui!</h1>
+                <p>Encontre os melhores lugares ao seu redor com os preços mais baratos e acessíveis. Fácil. Simples.
+                    Rápido.
+                </p>
+                <div class="btn title-button">Saber mais</div>
             </div>
-        </div>
-    </div>
-</div>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <div class="search py-3 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-lg">
-                            <h6>Categoria</h6>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option value="1">Alugar</option>
-                                <option value="2">Comprar</option>
-                            </select>
-                        </div>
-                        <div class="col-6 col-lg">
-                            <h6>Tipo de imóvel</h6>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option value="1">Alugar</option>
-                                <option value="2">Comprar</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <h6>Cidade</h6>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option value="1">Alugar</option>
-                                <option value="2">Comprar</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <h6>Valor</h6>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option value="1">Alugar</option>
-                                <option value="2">Comprar</option>
-                            </select>
-                        </div>
-                    </div>
-
-
+            <div class="col-12 col-lg-6 mt-5 mt-lg-0 text-center text-lg-end">
+                <div class="title-img">
+                    <img class="img-fluid"
+                        src="https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="">
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <app-houses-for-rent-list></app-houses-for-rent-list>
+<!-- Search-->
+<section class="search mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="search-container py-3 d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 col-lg">
+                                <h6>Categoria</h6>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option value="1">Alugar</option>
+                                    <option value="2">Comprar</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-lg">
+                                <h6>Tipo de imóvel</h6>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option value="1">Alugar</option>
+                                    <option value="2">Comprar</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <h6>Cidade</h6>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option value="1">Alugar</option>
+                                    <option value="2">Comprar</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <h6>Valor</h6>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option value="1">Alugar</option>
+                                    <option value="2">Comprar</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Featured properties -->
+<section class="featured-properties my-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="properties-title mb-1"><i class="bi bi-house-fill"></i> Imóveis em destaque</h2>
+                <p>Confira os imóveis em destaque.</p>
+                <app-houses-for-rent-list class="d-flex flex-wrap"></app-houses-for-rent-list>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who we are -->
+<section class="who-we-are mt-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="d-flex flex-column justify-content-center col-12 col-lg-6">
+                <h6>QUEM SOMOS</h6>
+                <h5>A mais de 20 anos no mercado, oferecendo soluções imobiliárias</h5>
+                <p>Transformar sonhos em realidade é o que nos motiva, proporcionar a melhor parte do sonho das pessoas,
+                    na conquista do seu lar, oferecendo imóveis de qualidade, com preço justo e com a qualidade que
+                    nossos clientes buscam. Solidificando assim o sonho de todo brasileiro de ter o Imóvel Próprio. Tudo
+                    isso só é possível, pois trabalhamos com pessoas que têm sonhos e objetivos, e para nós é um prazer
+                    saber que fazemos parte da transformação de histórias e conquistas.</p>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="btn">+ de 1200 imóveis cadastrados</div>
+                    </div>
+                    <div class="col">
+                        <div class="btn">Presentes em + de 15 estados</div>
+                    </div>
+                    <div class="col">
+                        <div class="btn">Estamos em + de 30 cidades</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center text-lg-end col-12 col-lg-6">
+                <div class="who-we-ares-right">
+                    <img class="img-fluid"
+                        src="https://media.istockphoto.com/photos/young-couple-in-front-of-a-house-holding-keys-of-their-new-home-picture-id1146556141?k=20&m=1146556141&s=612x612&w=0&h=nXPhnqWEgOM9cj-HiuAbbqUJSCw1iumlQGJHdvih6zc="
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Doubts-->
+<section class="doubts mt-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="properties-title mb-1"><i class="bi bi-chat-left-dots"></i> Tem alguma dúvida?</h2>
+                <p>Confira algumas das dúvidas mais frequentes.</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Qual documentação necessária para alugar um imóvel?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Qual documentação necessária para comprar um imóvel?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Quando pode ocorrer a quebra de contrato?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <app-footer></app-footer>
