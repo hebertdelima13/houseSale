@@ -1,6 +1,6 @@
 export interface Houses {
     id: number;
-    name: string;
+    title: string;
     address: string;
     desc: string;
     price: number;

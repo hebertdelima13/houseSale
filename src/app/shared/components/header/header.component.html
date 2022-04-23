@@ -12,7 +12,12 @@
         </ul>
 
         <div class="col-md-auto text-end">
-            <div class="btn header-buttons px-4">Login</div>
+            <app-buttons>
+                <span button (click)="login()">Registrar</span>
+            </app-buttons>
+            <app-buttons>
+                <span button (click)="login()">Entrar</span>
+            </app-buttons>
         </div>
     </div>
 </header>

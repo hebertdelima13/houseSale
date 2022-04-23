@@ -1,0 +1,77 @@
+@import "../../../../../styles.scss";
+
+.container-fluid {
+  background-image: url(https://images.pexels.com/photos/587993/pexels-photo-587993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  margin: auto;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+.card {
+  width: 350px;
+  height: 310px;
+  background: #fff;
+  border-radius: 0.8rem;
+  border: 0;
+
+  i {
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-family: $headingFont;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  span {
+    font-family: $headingFont;
+    font-weight: 700;
+    color: #ff0000;
+  }
+
+  input {
+    height: 35px;
+    width: 280px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    box-shadow: none;
+  }
+
+  button {
+    background: #ff0000;
+    font-weight: 500;
+    color: #fff;
+    width: 280px;
+
+    &:hover {
+      background: #DA0000;
+    }
+
+    &:focus {
+      box-shadow: none;
+  }
+  }
+
+  p {
+    font-size: .75rem;
+
+    a {
+      &:hover {
+        color: #ff0000;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .error {
+    color: red;
+  }
+}

@@ -9,7 +9,9 @@
                 <p>Encontre os melhores lugares ao seu redor com os preços mais baratos e acessíveis. Fácil. Simples.
                     Rápido.
                 </p>
-                <div class="btn title-button">Saber mais</div>
+                <app-buttons>
+                    <span button>Saber mais</span>
+                </app-buttons>
             </div>
 
             <div class="col-12 col-lg-6 mt-5 mt-lg-0 text-center text-lg-end">
@@ -28,41 +30,42 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="search-container py-3 d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6 col-lg">
-                                <h6>Categoria</h6>
-                                <select class="form-select" id="inputGroupSelect01">
-                                    <option value="1">Alugar</option>
-                                    <option value="2">Comprar</option>
-                                </select>
-                            </div>
-                            <div class="col-6 col-lg">
-                                <h6>Tipo de imóvel</h6>
-                                <select class="form-select" id="inputGroupSelect01">
-                                    <option value="1">Alugar</option>
-                                    <option value="2">Comprar</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                <h6>Cidade</h6>
-                                <select class="form-select" id="inputGroupSelect01">
-                                    <option value="1">Alugar</option>
-                                    <option value="2">Comprar</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                <h6>Valor</h6>
-                                <select class="form-select" id="inputGroupSelect01">
-                                    <option value="1">Alugar</option>
-                                    <option value="2">Comprar</option>
-                                </select>
-                            </div>
+                <div class="container py-3 px-0">
+                    <div class="row">
+                        <div class="col-6 col-lg">
+                            <h6>Categoria:</h6>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option value="1">Alugar</option>
+                                <option value="2">Comprar</option>
+                            </select>
                         </div>
-
-
+                        <div class="col-6 col-lg">
+                            <h6>Tipo de imóvel:</h6>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option value="1">Apartamento</option>
+                                <option value="2">Casa</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <h6>Cidade:</h6>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option value="1">Vitória</option>
+                                <option value="2">Rio de Janeiro</option>
+                                <option value="2">Belo Horizonte</option>
+                                <option value="2">Campinas</option>
+                                <option value="2">Florianópolis</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <h6>Valor:</h6>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option value="1">R$0 a R$ 500,00</option>
+                                <option value="2">R$501,00 a R$1.000,00</option>
+                            </select>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -76,7 +79,7 @@
             <div class="col">
                 <h2 class="properties-title mb-1"><i class="bi bi-house-fill"></i> Imóveis em destaque</h2>
                 <p>Confira os imóveis em destaque.</p>
-                <app-houses-for-rent-list class="d-flex flex-wrap"></app-houses-for-rent-list>
+                <app-houses-for-rent-list class="d-flex flex-wrap justify-content-start justify-content-md-start"></app-houses-for-rent-list>
             </div>
         </div>
     </div>
@@ -108,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="text-center text-lg-end col-12 col-lg-6">
+            <div class="text-center text-lg-end col-12 col-lg-6 mt-4 mt-md-4 mt-lg-0">
                 <div class="who-we-ares-right">
                     <img class="img-fluid"
                         src="https://media.istockphoto.com/photos/young-couple-in-front-of-a-house-holding-keys-of-their-new-home-picture-id1146556141?k=20&m=1146556141&s=612x612&w=0&h=nXPhnqWEgOM9cj-HiuAbbqUJSCw1iumlQGJHdvih6zc="
