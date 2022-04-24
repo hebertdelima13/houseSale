@@ -22,7 +22,7 @@ export class LoginPageComponent implements OnInit {
     if(!user) {
       return this.error = true;
     }
-    return this.router.navigateByUrl('dashboard');
+    return this.router.navigateByUrl('housescreate');
   }
 
   navigateByUrl(url: string) {

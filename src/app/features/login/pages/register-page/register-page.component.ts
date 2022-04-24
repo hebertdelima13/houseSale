@@ -26,6 +26,7 @@ export class RegisterPageComponent implements OnInit {
     };
     this.userService.createUser(users);
     alert('Usuário criado com sucesso!');
+    console.log(this.user)
     this.router.navigateByUrl('/login');
   }
 

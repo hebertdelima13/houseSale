@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-12">
+            <div class="card-container d-flex align-items-center justify-content-center">
+                <div class="card d-flex align-items-center justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="bi bi-house-fill"></i>
+                        <h6 class="m-0">Adicionar imóvel</h6>
+                    </div>
+                    <form #houseForm="ngForm" (ngSubmit)="onSubmit(houseForm)">
+                        <input class="form-control mt-3 ps-2" type="text" name="title" placeholder="Titúlo do imóvel"
+                        [(ngModel)]="house.title" required>
+                        <input class="form-control mt-3 ps-2" type="text" name="city"
+                            placeholder="Cidade do imóvel" [(ngModel)]="house.city" required>
+                        <input class="form-control mt-3 ps-2" type="text" name="descShort"
+                            placeholder="Breve descrição do imóvel" [(ngModel)]="house.descShort" required>
+                        <input class="form-control mt-3 ps-2" type="text" name="descFull"
+                            placeholder="Descrição completa do imóvel" [(ngModel)]="house.descFull" required>
+                        <input class="form-control mt-3 ps-2" type="number" name="price" placeholder="Preço do imóvel"
+                        [(ngModel)]="house.price" required>
+                        <input class="form-control mt-3 ps-2" type="text" name="img"
+                            placeholder="(URL) Imagem do imóvel" [(ngModel)]="house.img" required>
+                        <div class="d-flex">
+                            <button class="btn mt-3 me-2" type="submit" [disabled]="houseForm.invalid">Enviar</button>
+                            <button class="btn mt-3" (click)="navigateByUrl('/')">Sair</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

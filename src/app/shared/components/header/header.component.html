@@ -1,22 +1,22 @@
 <header>
     <div
         class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between py-3 mb-4 border-bottom">
-        <h3 class="logo m-0"><span>.</span>house <span>sale</span></h3>
+        <h3 class="logo m-0" (click)="navigateByUrl('')"><span>.</span>house <span>sale</span></h3>
 
         <ul class="nav col-12 col-md-12 col-lg-auto mb-2 justify-content-center">
-            <li><a href="#" class="nav-link px-0 mx-3">Home</a></li>
-            <li><a href="#" class="nav-link px-0 mx-3">Comprar</a></li>
-            <li><a href="#" class="nav-link px-0 mx-3">Alugar</a></li>
-            <li><a href="#" class="nav-link px-0 mx-3">Contato</a></li>
-            <li><a href="#" class="nav-link px-0 mx-3">Sobre nós</a></li>
+            <li><a href="" (click)="navigateByUrl('')" class="nav-link px-0 mx-3">Home</a></li>
+            <li><a href="" class="nav-link px-0 mx-3">Comprar</a></li>
+            <li><a href="" class="nav-link px-0 mx-3">Alugar</a></li>
+            <li><a href="" class="nav-link px-0 mx-3">Contato</a></li>
+            <li><a href="" class="nav-link px-0 mx-3">Sobre nós</a></li>
         </ul>
 
         <div class="col-md-auto text-end">
-            <app-buttons>
-                <span button (click)="login()">Registrar</span>
+            <app-buttons (click)="navigateByUrl('/register')">
+                <span button>Registrar</span>
             </app-buttons>
-            <app-buttons>
-                <span button (click)="login()">Entrar</span>
+            <app-buttons (click)="navigateByUrl('login')">
+                <span button>Entrar</span>
             </app-buttons>
         </div>
     </div>

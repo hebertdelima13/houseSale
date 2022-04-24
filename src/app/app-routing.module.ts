@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardPageComponent } from './features/dashboard/pages/dashboard-page/dashboard-page.component';
 import { HomePageComponent } from './features/home/pages/home-page/home-page.component';
 import { HousesForRentListComponent } from './features/houses/components/houses-for-rent-list/houses-for-rent-list.component';
+import { HousesCreateComponent } from './features/houses/pages/houses-create/houses-create.component';
 import { HousesDetailsComponent } from './features/houses/pages/houses-details/houses-details.component';
 import { LoginPageComponent } from './features/login/pages/login-page/login-page.component';
 import { RegisterPageComponent } from './features/login/pages/register-page/register-page.component';
@@ -10,10 +10,10 @@ import { RegisterPageComponent } from './features/login/pages/register-page/regi
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'houses', component: HousesForRentListComponent},
-  { path: 'houses-details/:id', component: HousesDetailsComponent},
+  {path: 'houses-details/:id', component: HousesDetailsComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'dashboard', component: DashboardPageComponent}
+  {path: 'housescreate', component: HousesCreateComponent}
 ];
 
 @NgModule({
