@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-12">
+            <div class="card-container d-flex align-items-center justify-content-center">
+                <div class="card d-flex align-items-center justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <h6 class="m-0"><span>.</span>house <span>sale</span></h6>
+                    </div>
+                    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+                        <input class="form-control mt-3 ps-2" type="text" placeholder="Digite o nome" name="name"
+                            [(ngModel)]="user.name" required>
+                        <input class="form-control mt-3 ps-2" type="email" placeholder="Digite o Email" name="email"
+                            [(ngModel)]="user.email" required>
+                        <input class="form-control mt-3 ps-2 mb-2" type="password" placeholder="Digite a senha"
+                            name="password" [(ngModel)]="user.password" (keyup.enter)="onSubmit(registerForm)" required>
+
+                        <p class="error" *ngIf="error">Digite todos os campos, tente novamente!</p>
+                        <p>Já possui uma conta? <a (click)="navigateByUrl('/login')">Entrar em uma conta</a></p>
+                        <button class="btn mt-3" type="submit" [disabled]="registerForm.invalid">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

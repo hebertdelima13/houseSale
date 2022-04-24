@@ -9,6 +9,8 @@ import { HousesModule } from './features/houses/houses.module';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { LoginModule } from './features/login/login.module';
+import { DashboardModule } from './features/dashboard/dashboard.module';
 registerLocaleData(localePt); 
 
 @NgModule({
@@ -20,7 +22,9 @@ registerLocaleData(localePt);
     AppRoutingModule,
     FormsModule,
     HomeModule,
-    HousesModule
+    LoginModule,
+    HousesModule,
+    DashboardModule
   ],
   providers: [
     {
