@@ -1,0 +1,42 @@
+@import "../../../../../styles.scss";
+
+h1 {
+    font-family: $headingFont;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+    text-align: justify;
+
+    span {
+        color: #ff0000;
+    }
+}
+
+h4 {
+    font-family: $headingFont;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 0;
+
+    span {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #ff0000;
+    }
+}
+
+h6 {
+    font-family: $headingFont;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;   
+
+    i {
+        color: #DA0000;
+    }
+}

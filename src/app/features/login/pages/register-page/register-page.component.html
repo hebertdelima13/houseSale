@@ -15,7 +15,7 @@
                             name="password" [(ngModel)]="user.password" (keyup.enter)="onSubmit(registerForm)" required>
 
                         <p class="error" *ngIf="error">Digite todos os campos, tente novamente!</p>
-                        <p>Já possui uma conta? <a (click)="navigateByUrl('/login')">Entrar em uma conta</a></p>
+                        <p class="text-center">Já possui uma conta? <a (click)="navigateByUrl('/login')">Entrar em uma conta</a></p>
                         <button class="btn mt-3" type="submit" [disabled]="registerForm.invalid">Registrar</button>
                     </form>
                 </div>

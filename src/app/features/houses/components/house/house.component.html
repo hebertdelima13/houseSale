@@ -1,9 +1,9 @@
-<div class="card me-3 mt-3" *ngIf="house">
+<div class="card me-3 mt-3" *ngIf="house" (click)="houseDetails(house.id)">
   <img src="{{house.img}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h6 class="card-title">{{house.title}}</h6>
     <p class="card-price">{{house.price | currency: 'BRL'}}</p>
     <p class="card-address">{{house.address}}</p>
-    <p class="card-desc">{{house.desc}}</p>
+    <p class="card-desc">{{house.descShort}}</p>
   </div>
 </div>
