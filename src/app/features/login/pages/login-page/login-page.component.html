@@ -6,14 +6,17 @@
           <div class="d-flex align-items-center">
             <h6 class="m-0"><span>.</span>house <span>sale</span></h6>
           </div>
-          <form #loginForm="ngForm">
-            <input class="form-control mt-3 ps-2" type="email" name="email" placeholder="E-mail" ngModel required>
-            <input class="form-control mt-3 ps-2 mb-2" type="password" name="password" placeholder="Senha" ngModel
-              required (keyup.enter)="login(loginForm)">
+          <form [formGroup]="loginForm" (submit)="onSubmit(loginForm)">
+            <input class="form-control mt-3 ps-2" type="email" name="email" placeholder="E-mail"
+              formControlName="email">
+            <p class="error" *ngIf="(loginForm.controls.email?.errors?.email)">
+              Digite um e-mail válido!</p>
+            <input class="form-control mt-3 ps-2 mb-2" type="password" name="password" placeholder="Senha"
+              formControlName="password">
+            <p class="error" *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
+            <p>Não possui uma conta ainda? <a (click)="navigateByUrl('/register')">Criar uma conta</a></p>
+            <button type="submit" class="btn mt-3" [disabled]="loginForm.invalid">Entrar</button>
           </form>
-          <p class="error" *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
-          <p>Não possui uma conta ainda? <a (click)="navigateByUrl('/register')">Criar uma conta</a></p>
-          <button class="btn mt-3" [disabled]="loginForm.invalid" (click)="login(loginForm)">Entrar</button>
         </div>
       </div>
     </div>

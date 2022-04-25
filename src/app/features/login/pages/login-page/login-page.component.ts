@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from '../../services/users.service';
+import * as CryptoJS from 'crypto-js'; 
 
 @Component({
   templateUrl: './login-page.component.html',
@@ -15,13 +16,20 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  login(loginForm: NgForm) {
-    const data = loginForm.value;
-    const user = this.userService.authenticate(data.email, data.password);
+
+  loginForm = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required])
+  });
+
+  onSubmit(loginForm: FormGroup) {
+    const formValue = loginForm.value;
+    const user = this.userService.authenticate(formValue.email, formValue.password);
+    const userJson = JSON.stringify(formValue.password)
     if(!user) {
       return this.error = true;
     }
+    localStorage.setItem('member', CryptoJS.AES.encrypt( userJson, "member").toString())
     return this.router.navigateByUrl('housescreate');
   }
 
