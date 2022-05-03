@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Houses } from '../../models/houses';
-import { HousesService } from '../../services/houses.service';
+import { House } from '../../models/house';
+import { HouseService } from '../../services/house.service';
 
 @Component({
-  templateUrl: './houses-details.component.html',
-  styleUrls: ['./houses-details.component.scss']
+  templateUrl: './house-details.component.html',
+  styleUrls: ['./house-details.component.scss']
 })
-export class HousesDetailsComponent implements OnInit {
+export class HouseDetailsComponent implements OnInit {
 
-  house?: Houses;
+  house?: House;
 
   constructor(
     private activedRoute: ActivatedRoute,
-    private houseService: HousesService,
+    private houseService: HouseService,
     private router: Router) { }
 
   ngOnInit(): void {

@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Houses } from '../../models/houses';
-import { HousesService } from '../../services/houses.service';
+import { House } from '../../models/house';
+import { HouseService } from '../../services/house.service';
 import { ToastrService } from 'ngx-toastr';
 import { timer } from 'rxjs';
 
 @Component({
-  templateUrl: './houses-create.component.html',
-  styleUrls: ['./houses-create.component.scss']
+  templateUrl: './house-create.component.html',
+  styleUrls: ['./house-create.component.scss']
 })
-export class HousesCreateComponent implements OnInit {
+export class HouseCreateComponent implements OnInit {
 
-  house: Houses = this.houseService.getDefaultHouse();
+  house: House = this.houseService.getDefaultHouse();
   
 
-  constructor(private houseService: HousesService, private toastr: ToastrService,
+  constructor(private houseService: HouseService, private toastr: ToastrService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class HousesCreateComponent implements OnInit {
 
   housesForm = new FormGroup({    
     id: new FormControl(this.house.id),
-    title: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    title: new FormControl('', [Validators.required]),
     city: new FormControl('', [Validators.required]),
     descShort: new FormControl('', [Validators.required]),
     descFull: new FormControl('', [Validators.required]),
@@ -34,9 +34,10 @@ export class HousesCreateComponent implements OnInit {
 
   onSubmit(housesForm: FormGroup) {
     const formValue = housesForm.value;
-    const houses: Houses = {
+    const houses: House = {
       id: this.house.id,
-      ...formValue
+      ...formValue,
+      inclusionDate: new Date()
     };
     this.houseService.createHouse(houses);
     this.toastr.success('Imóvel adicionado com sucesso!', '', {

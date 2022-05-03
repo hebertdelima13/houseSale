@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './features/home/home.module';
-import { HousesModule } from './features/houses/houses.module';
+import { HouseModule } from './features/houses/house.module';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -23,7 +23,7 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     HomeModule,
     LoginModule,
-    HousesModule
+    HouseModule
   ],
   providers: [
     {

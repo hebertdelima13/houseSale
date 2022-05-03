@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Houses } from '../../models/houses';
-import { HousesService } from '../../services/houses.service';
+import { House } from '../../models/house';
 
 @Component({
   selector: 'app-house',
@@ -11,7 +10,7 @@ import { HousesService } from '../../services/houses.service';
 export class HouseComponent implements OnInit {
 
   @Input()
-  house?: Houses;
+  house?: House;
 
   constructor(private router: Router) { }
 

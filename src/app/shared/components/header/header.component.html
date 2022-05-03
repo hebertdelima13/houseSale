@@ -12,12 +12,12 @@
         </ul>
 
         <div class="col-md-auto text-end">
-            <app-buttons (click)="navigateByUrl('/register')">
-                <span button>Registrar</span>
-            </app-buttons>
-            <app-buttons (click)="navigateByUrl('login')">
-                <span button>Entrar</span>
-            </app-buttons>
+            <app-button (click)="navigateByUrl('/register')">
+                <span>Registrar</span>
+            </app-button>
+            <app-button (click)="navigateByUrl('login')">
+                <span>Entrar</span>
+            </app-button>
         </div>
     </div>
 </header>

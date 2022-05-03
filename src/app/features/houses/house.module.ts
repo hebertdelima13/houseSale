@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HousesForRentListComponent } from './components/houses-for-rent-list/houses-for-rent-list.component';
+import { HouseForRentListComponent } from './components/house-for-rent-list/house-for-rent-list.component';
 import { HouseComponent } from './components/house/house.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { HousesDetailsComponent } from './pages/houses-details/houses-details.component';
-import { HousesCreateComponent } from './pages/houses-create/houses-create.component';
+import { HouseDetailsComponent } from './pages/house-details/house-details.component';
+import { HouseCreateComponent } from './pages/house-create/house-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,10 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    HousesForRentListComponent,
+    HouseForRentListComponent,
     HouseComponent,
-    HousesDetailsComponent,
-    HousesCreateComponent
+    HouseDetailsComponent,
+    HouseCreateComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +26,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  exports: [HousesForRentListComponent]
+  exports: [HouseForRentListComponent]
 })
-export class HousesModule { }
+export class HouseModule { }

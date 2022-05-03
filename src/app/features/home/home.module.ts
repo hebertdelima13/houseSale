@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { HousesModule } from '../houses/houses.module';
+import { HouseModule } from '../houses/house.module';
 
 
 
@@ -13,7 +13,7 @@ import { HousesModule } from '../houses/houses.module';
   imports: [
     CommonModule,
     SharedModule,
-    HousesModule
+    HouseModule
   ]
 })
 export class HomeModule { }

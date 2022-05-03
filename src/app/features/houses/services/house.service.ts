@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Houses } from '../models/houses';
+import { House } from '../models/house';
 import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HousesService {
+export class HouseService {
 
   constructor() { }
 
-  houses: Array<Houses> = [
+  houses: Array<House> = [
     {
       id: 1,
       title: 'Lorem Ipsum',
@@ -18,7 +18,7 @@ export class HousesService {
       city: 'Lorem Ipsum',
       price: 500,
       img: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      inclusionDate: new Date()
+      inclusionDate: '02/19/2022'
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export class HousesService {
       city: 'Lorem Ipsum',
       price: 700,
       img: 'https://images.pexels.com/photos/10530185/pexels-photo-10530185.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      inclusionDate: new Date()
+      inclusionDate: '03/10/2022'
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ export class HousesService {
       city: 'Lorem Ipsum',
       price: 525,
       img: 'https://images.pexels.com/photos/2103826/pexels-photo-2103826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      inclusionDate: new Date()
+      inclusionDate: '04/10/2022'
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ export class HousesService {
       city: 'Lorem Ipsum',
       price: 400,
       img: 'https://images.pexels.com/photos/979190/pexels-photo-979190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      inclusionDate: new Date()
+      inclusionDate: '04/20/2022'
     },
     {
       id: 5,
@@ -58,11 +58,11 @@ export class HousesService {
       city: 'Lorem Ipsum',
       price: 250.50,
       img: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      inclusionDate: new Date()
+      inclusionDate: '05/01/2022'
     },
   ];
 
-  getDefaultHouse(): Houses {
+  getDefaultHouse(): House {
     const dateToday = moment().format('YYYY/MM/DD');
     return {
       id: this.generateNextId(),
@@ -84,7 +84,7 @@ export class HousesService {
     return this.houses.find((house) => house.id == id);
   }
 
-  createHouse(house: Houses) {
+  createHouse(house: House) {
     this.houses.push(house);
     return this.houses;
   }
