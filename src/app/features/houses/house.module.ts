@@ -8,6 +8,7 @@ import { HouseCreateComponent } from './pages/house-create/house-create.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HouseDashboardComponent } from './pages/house-dashboard/house-dashboard.component';
 
 
 
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HouseForRentListComponent,
     HouseComponent,
     HouseDetailsComponent,
-    HouseCreateComponent
+    HouseCreateComponent,
+    HouseDashboardComponent
   ],
   imports: [
     CommonModule,

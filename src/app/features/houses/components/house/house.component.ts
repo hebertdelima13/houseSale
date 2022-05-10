@@ -18,6 +18,6 @@ export class HouseComponent implements OnInit {
   }
 
   houseDetails(id: number) {
-    this.router.navigateByUrl(`/houses-details/${id}`);
+    this.router.navigateByUrl(`/house-details/${id}`);
   }
 }

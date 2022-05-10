@@ -1,0 +1,16 @@
+@import "../../../../../styles.scss";
+
+/*logo*/
+
+.logo {
+    font-family: $headingFont;
+    font-weight: 700;
+    font-size: 2rem;
+    cursor: pointer;
+
+    span {
+        font-family: $headingFont;
+        font-weight: 700;
+        color: #ff0000;
+    }
+}

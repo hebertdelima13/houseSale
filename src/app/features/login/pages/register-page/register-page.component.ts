@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { timer } from 'rxjs';
 import { User } from '../../models/user.model';
 import { UsersService } from '../../services/users.service';
+import { Location } from '@angular/common';
 
 @Component({
   templateUrl: './register-page.component.html',
@@ -12,39 +13,54 @@ import { UsersService } from '../../services/users.service';
 })
 export class RegisterPageComponent implements OnInit {
 
-  user: User = this.userService.getDefaultUser();
+  // user: User = this.userService.getDefaultUser();
   error: boolean = false;
+  form!: FormGroup;
+  isSubmitted: boolean = false
+  currentUserId: number
 
   constructor(private userService: UsersService, private toastr: ToastrService,
-    private router: Router) { }
+    private router: Router, private formBuilder: FormBuilder, private location: Location) { }
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required,Validators.email],
+      password: ['', [Validators.required]],
+    })
   }
 
-  registerForm = new FormGroup({
-    id: new FormControl(this.user.id),
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required])
-  });
+  onSubmit() {
+    this.isSubmitted = true
+    if(this.form.invalid) {
+      return;
+    }
 
-  onSubmit(registerForm: FormGroup) {
-    const formValue = registerForm.value;
-    const users: User = {
-      id: this.user.id,
-      ...formValue
-    };
-    this.userService.createUser(users);
-    this.toastr.success('Usuário cadastrado com sucesso!', '', {
-      progressBar: true,
-      timeOut: 2000
-    });
+    const user: User = {
+      id: this.currentUserId,
+      name: this.form.controls.name.value,
+      email: this.form.controls.email.value,
+      password: this.form.controls.password.value
+    }
+      this._addUser(user)
+    
+  }
 
-    timer(2000).toPromise().then(done => {
-      console.log(this.user)
-      this.router.navigateByUrl('/login');
+  _addUser(user: User) {
+    this.userService.register(user).subscribe(res => {
+      this.toastr.success('Usuário adicionado com sucesso!', '', {
+        progressBar: true,
+        timeOut: 1500
+      });
+      timer(1500).toPromise().then(done => {
+        location.href = 'login'
+      })
+    }, (error) => {
+      this.toastr.error('O usuário não pode ser adicionado!', '', {
+        progressBar: true,
+        timeOut: 2000
+      }) ;
     })
-
   }
 
   navigateByUrl(url: string) {

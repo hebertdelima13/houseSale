@@ -6,19 +6,18 @@
                     <div class="d-flex align-items-center">
                         <h6 class="m-0"><span>.</span>house <span>sale</span></h6>
                     </div>
-                    <form [formGroup]="registerForm" (submit)="onSubmit(registerForm)">
+                    <form [formGroup]="form">
                         <input class="form-control mt-3 ps-2" type="text" placeholder="Digite o nome" name="name"
                             formControlName="name">
                         <input class="form-control mt-3 ps-2" type="email" placeholder="Digite o Email" name="email"
                             formControlName="email">
-                        <p class="error" *ngIf="(registerForm.controls.email?.errors?.email)">
+                        <p class="error" *ngIf="(form.controls.email?.errors?.email)">
                             Digite um e-mail válido!</p>
                         <input class="form-control mt-3 ps-2 mb-2" type="password" placeholder="Digite a senha"
                             name="password" formControlName="password">
-                        <p class="error" *ngIf="error">Digite todos os campos, tente novamente!</p>
                         <p class="text-center">Já possui uma conta? <a (click)="navigateByUrl('/login')">Entrar em uma
                                 conta</a></p>
-                        <button class="btn mt-3" type="submit" [disabled]="registerForm.invalid">Registrar</button>
+                        <button class="btn mt-3" type="submit" [disabled]="form.invalid" (click)="onSubmit()">Registrar</button>
                     </form>
                 </div>
             </div>

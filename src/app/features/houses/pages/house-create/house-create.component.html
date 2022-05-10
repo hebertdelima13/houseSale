@@ -16,11 +16,12 @@
                             placeholder="Breve descrição do imóvel" formControlName="descShort">
                         <!-- <input class="form-control mt-3 ps-2" type="text" name="descFull"
                             placeholder="Descrição completa do imóvel" formControlName="descFull"> -->
-                        <textarea class="mt-3 ps-2" name="descFull" id="descFull" placeholder="Descrição completa do imóvel"
-                            formControlName="descFull"></textarea>
+                        <textarea class="mt-3 ps-2" name="descFull" id="descFull"
+                            placeholder="Descrição completa do imóvel" formControlName="descFull"></textarea>
                         <input class="form-control mt-2 ps-2" type="number" name="price" placeholder="Preço do imóvel"
                             formControlName="price">
-                        <input class="form-control mt-3 ps-2" type="text" name="img"
+                        <!-- <input class="form-control mt-3 ps-2" type="text" name="img" formControlName="img"> -->
+                        <input class="form-control mt-3 ps-2" type="text" name="img" 
                             placeholder="(URL) Imagem do imóvel" formControlName="img">
                         <div class="d-flex justify-content-center">
                             <button class="btn mt-3 me-2" type="submit" [disabled]="housesForm.invalid">Enviar</button>

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between py-3 mb-4 border-bottom">
+        <h3 class="logo m-0"><span>.</span>house <span>sale</span></h3>
+
+        <div class="col-md-auto text-end">
+          <app-button>
+            <span *ngIf="user"><i class="bi bi-person-fill"></i> {{user.name}}</span>
+          </app-button>
+          <app-button>
+            <span>Sair</span>
+          </app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-12">
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Titúlo</th>
+              <th scope="col">Data de inclusão</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let house of houses">
+            <tr>
+              <td>{{house.id}}</td>
+              <td>{{house.title}}</td>
+              <td>{{house.inclusionDate | date: 'shortDate'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
