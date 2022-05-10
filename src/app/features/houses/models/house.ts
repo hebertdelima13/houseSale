@@ -1,10 +1,10 @@
 export interface House {
     id: number;
     title: string;
-    descShort: string;
-    descFull: string;
+    desc_short: string;
+    desc_full: string;
     city: string;
     price: number;
     img: string;
-    inclusionDate: Date | string;
+    inclusion_date?: Date | string;
 }

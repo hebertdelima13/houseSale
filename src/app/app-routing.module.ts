@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'dashboard', component: HouseDashboardComponent},
-  {path: 'housescreate', component: HouseCreateComponent, canActivate: [AuthGuard]}
+  {path: 'housescreate', component: HouseCreateComponent, canActivate: [AuthGuard]},
+  { path: 'housescreate/:id', component: HouseCreateComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

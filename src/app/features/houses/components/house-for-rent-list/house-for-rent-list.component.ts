@@ -9,11 +9,18 @@ import { HouseService } from '../../services/house.service';
 })
 export class HouseForRentListComponent implements OnInit {
 
-  houses: Array<House> = this.houseServices.getHouses();
+  houses: House[] = []
 
   constructor(private houseServices: HouseService) { }
 
   ngOnInit(): void {
+    this.getHouses()
+  }
+
+  getHouses() {
+    this.houseServices.getHouses().subscribe((houses) => {
+      this.houses = houses
+    })
   }
 
 }

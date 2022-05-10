@@ -5,7 +5,6 @@ import { ToastrService } from 'ngx-toastr';
 import { timer } from 'rxjs';
 import { User } from '../../models/user.model';
 import { UsersService } from '../../services/users.service';
-import { Location } from '@angular/common';
 
 @Component({
   templateUrl: './register-page.component.html',
@@ -13,14 +12,13 @@ import { Location } from '@angular/common';
 })
 export class RegisterPageComponent implements OnInit {
 
-  // user: User = this.userService.getDefaultUser();
   error: boolean = false;
   form!: FormGroup;
   isSubmitted: boolean = false
-  currentUserId: number
+  userId: number
 
   constructor(private userService: UsersService, private toastr: ToastrService,
-    private router: Router, private formBuilder: FormBuilder, private location: Location) { }
+    private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -37,7 +35,7 @@ export class RegisterPageComponent implements OnInit {
     }
 
     const user: User = {
-      id: this.currentUserId,
+      id: this.userId,
       name: this.form.controls.name.value,
       email: this.form.controls.email.value,
       password: this.form.controls.password.value

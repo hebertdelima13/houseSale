@@ -17,9 +17,19 @@ export class HouseDetailsComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.activedRoute.params.subscribe((params) => {
-      this.house = this.houseService.getById(params['id']);
-    });
+    this.activedRoute.params.subscribe(params => {
+      if (params.id) {
+        this.getHouseId(params.id)
+      }
+    })
+  }
+
+  getHouseId(id: number) {
+    this.houseService
+      .getHouseId(id)
+      .subscribe((resHouse) => {
+        this.house = resHouse;
+      });
   }
 
   navigateByUrl(url: string) {

@@ -41,7 +41,7 @@ export class LoginPageComponent implements OnInit {
       }  
       newUser.password = CryptoJS.AES.encrypt( newUser.password, "password").toString()  
       localStorage.setItem('member', JSON.stringify(newUser));
-      location.href = 'housescreate'
+      location.href = 'dashboard'
 
     }, (error: HttpErrorResponse) => {
       this.authError = true
